@@ -8376,14 +8376,6 @@ vue-axios@^3.2.5:
   resolved "https://registry.nlark.com/vue-axios/download/vue-axios-3.2.5.tgz#b3bd0c82a44cc9164aeca0efa071ac103e15767f"
   integrity sha1-s70MgqRMyRZK7KDvoHGsED4Vdn8=
 
-vue-cli-plugin-vue-next@~0.1.4:
-  version "0.1.4"
-  resolved "https://registry.npm.taobao.org/vue-cli-plugin-vue-next/download/vue-cli-plugin-vue-next-0.1.4.tgz#8173186aedb65a7e9fe80889a9c44b023544dd9f"
-  integrity sha1-gXMYau22Wn6f6AiJqcRLAjVE3Z8=
-  dependencies:
-    chalk "^4.1.0"
-    vue-loader "^16.0.0-alpha.3"
-
 vue-eslint-parser@^7.10.0:
   version "7.10.0"
   resolved "https://registry.nlark.com/vue-eslint-parser/download/vue-eslint-parser-7.10.0.tgz?cache=0&sync_timestamp=1627452599248&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvue-eslint-parser%2Fdownload%2Fvue-eslint-parser-7.10.0.tgz#ea4e4b10fd10aa35c8a79ac783488d8abcd29be8"
@@ -8402,8 +8394,7 @@ vue-hot-reload-api@^2.3.0:
   resolved "https://registry.nlark.com/vue-hot-reload-api/download/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
   integrity sha1-UylVzB6yCKPZkLOp+acFdGV+CPI=
 
-"vue-loader-v16@npm:vue-loader@^16.1.0", vue-loader@^16.0.0-alpha.3:
-  name vue-loader-v16
+"vue-loader-v16@npm:vue-loader@^16.1.0":
   version "16.5.0"
   resolved "https://registry.nlark.com/vue-loader/download/vue-loader-16.5.0.tgz?cache=0&sync_timestamp=1628666727543&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvue-loader%2Fdownload%2Fvue-loader-16.5.0.tgz#09c4e0712466899e34b99a686524f19165fb2892"
   integrity sha1-CcTgcSRmiZ40uZpoZSTxkWX7KJI=
@@ -8483,6 +8474,11 @@ wcwidth@^1.0.1:
   integrity sha1-8LDc+RW8X/FSivrbLA4XtTLaL+g=
   dependencies:
     defaults "^1.0.3"
+
+web-storage-cache@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.npm.taobao.org/web-storage-cache/download/web-storage-cache-1.1.1.tgz#42ac07e77ea860e884895be9ba99ab1e04eb162e"
+  integrity sha1-QqwH536oYOiEiVvpupmrHgTrFi4=
 
 webpack-bundle-analyzer@^3.8.0:
   version "3.9.0"
