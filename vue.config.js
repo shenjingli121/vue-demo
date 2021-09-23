@@ -5,16 +5,17 @@ module.exports = {
         open: false,  // 启动后是否自动打开网页
         https: false,
         hotOnly: false,
-        proxy:{
-            'demo/':{
-                target: 'http://localhost:12341/',
-                ws: false,
-                changeOrigin: false,
-                pathRewrite: {
-                    '^/demo': '/'
-                }
-            }
-        }
-
+        hot: true,
+        // proxy:{
+        //     'api/':{
+        //         target: 'http://localhost:12341/',
+        //         ws: false,
+        //         changeOrigin: false,
+        //         pathRewrite: {
+        //             '^/api': '/'
+        //         }
+        //     }
+        // }
+        proxy: 'http://localhost:12341/'
     }
 };

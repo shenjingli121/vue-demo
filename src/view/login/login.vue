@@ -16,6 +16,7 @@
                         <el-input type="password" v-model="form.password"  placeholder="请输入密码"></el-input>
                     </el-form-item>
                     <el-button @click="login()" class="button" type="primary">登录</el-button>
+                    <el-button @click="logout()" class="button" type="primary">登出</el-button>
                 </el-form>
             </el-card>
         </div>
@@ -23,6 +24,8 @@
 </template>
 <script>
     // import store from '../../config/loaclStotage'
+    // import localStorage from "../../config/localStorage";
+
     export default {
         name: "login",
         data() {
@@ -62,10 +65,15 @@
         },
         methods: {
             login() {
-                this.$http.post('test/hello').then(res => {
-
+                this.$http.post('login', {...this.form}, {method: 'POST'}).then(res => {
                     console.log(res);
-
+                    // this.$store.setters.
+                });
+            },
+            logout() {
+                this.$http.post('/test/hello',{...this.form},{method:'POST'}).then(res => {
+                    console.log(res);
+                    // this.$store.setters.
                 });
             }
         }

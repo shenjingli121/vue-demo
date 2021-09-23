@@ -1,7 +1,8 @@
 import axios from "axios";
-import store from "./loaclStotage";
+
+
 const ajax = axios;
-ajax.defaults.baseURL = '/demo/';
+// ajax.defaults.baseURL = '/api/';
 const errorHandle = (status, other) => {
     switch (status) {
         case 400:
@@ -26,9 +27,12 @@ const errorHandle = (status, other) => {
 ajax.interceptors.request.use(function (config) {
     // 在发送请求之前做些什么
     // console.log(config);
-    // if (localStorage.elementToken) {
-    //     config.headers.Authorization = localStorage.elementToken;
-    // }
+    // if (localStorage.token) {
+    //     config.headers.Authorization = localStorage.token;
+    // }// 实现单点登录
+    // if (store.token) {
+    //     config.headers.authorization = store.token;
+    // }// 每次登录
     // console.log(store.get('user'));
     // console.log(config);
     return config;
@@ -39,9 +43,9 @@ ajax.interceptors.request.use(function (config) {
 ajax.interceptors.response.use(function (response) {
     // 对响应数据做点什么
     let result = response.data;
-    // console.log(response,">>>>>>>>>>>>");
-    // console.log(response.data.token);
-    // response.headers['Authorization'] = response.data.token;
+    // if (response.headers['authorization']) {
+    //     localStorage.token = response.headers['authorization'];
+    // }
     return result.code === 200 ? Promise.resolve(result) : Promise.reject(result);
 }, function (error) {
     // 对响应错误做点什么

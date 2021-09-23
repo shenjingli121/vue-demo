@@ -5,12 +5,14 @@ import ElementPlus from 'element-plus';
 import 'element-plus/lib/theme-chalk/index.css';
 import router from "./router/index"
 import ajax from "./config/axiosConfig"
-import store from "./config/loaclStotage"
+import localStorage from "./config/localStorage"
+import store from './store/index.js'
 
 const app = createApp(App);
 app.use(router);
-app.config.globalProperties.$store = store;
-// app.use(store);
+app.use(store);
+app.config.globalProperties.$localStorage = localStorage;
+// app.config.globalProperties.$router = router;
 app.use(VueAxios, ajax);
 
 app.mount('#app');
