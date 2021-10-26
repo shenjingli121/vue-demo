@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const ajax = axios;
-// ajax.defaults.baseURL = '/api/';
+ajax.defaults.baseURL = '/api/';
 const errorHandle = (status, other) => {
     switch (status) {
         case 400:
@@ -26,15 +26,12 @@ const errorHandle = (status, other) => {
 // 添加请求拦截器
 ajax.interceptors.request.use(function (config) {
     // 在发送请求之前做些什么
-    // console.log(config);
-    // if (localStorage.token) {
-    //     config.headers.Authorization = localStorage.token;
-    // }// 实现单点登录
+    if (localStorage.token) {
+        config.headers.Authorization = localStorage.token;
+    }// 实现单点登录
     // if (store.token) {
     //     config.headers.authorization = store.token;
     // }// 每次登录
-    // console.log(store.get('user'));
-    // console.log(config);
     return config;
 }, function (error) {
     // 对请求错误做些什么

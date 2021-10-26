@@ -65,7 +65,7 @@
         },
         methods: {
             login() {
-                this.$http.post('login', {...this.form}, {method: 'POST'}).then(res => {
+                this.$http.post('/login', {...this.form}, {method: 'POST'}).then(res => {
                     console.log(res);
                     // this.$store.setters.
                 });

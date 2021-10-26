@@ -6,16 +6,16 @@ module.exports = {
         https: false,
         hotOnly: false,
         hot: true,
-        // proxy:{
-        //     'api/':{
-        //         target: 'http://localhost:12341/',
-        //         ws: false,
-        //         changeOrigin: false,
-        //         pathRewrite: {
-        //             '^/api': '/'
-        //         }
-        //     }
-        // }
-        proxy: 'http://localhost:12341/'
+        proxy:{
+            'api/':{
+                target: 'http://localhost:12341/',
+                ws: false,
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api': '/'
+                }
+            }
+        }
+        // proxy: 'http://localhost:12341/'
     }
 };
